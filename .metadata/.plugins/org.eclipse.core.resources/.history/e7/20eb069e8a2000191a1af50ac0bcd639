@@ -1,0 +1,5 @@
+package com.cg.app.circuitbreaker.WebSite.resource;
+
+public class Service {
+
+}

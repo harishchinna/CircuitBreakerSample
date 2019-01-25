@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="hello"/>
+<aop-project name="WebSite">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/WebSite/src/main/java/com/cg/app/circuitbreaker/WebSite/WebSiteApplication.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:WebSite|3:java:com.cg.app.circuitbreaker.WebSite.WebSiteApplication|8:websiteResource:15" bean-file="/WebSite/src/main/java/com/cg/app/circuitbreaker/WebSite/resource/WebsiteResource.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/WebSite/src/main/java/com/cg/app/circuitbreaker/WebSite/WebSiteApplication.java" source="=WebSite/C:\/Users\/jharish\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=WebSite/src\/main\/java&lt;com.cg.app.circuitbreaker.WebSite.resource{WebsiteResource.java[WebsiteResource~hello~QModel;" target-start-line="22"/>
+</aspect-definition>
+</aop-project>
+</aop-reference-model>

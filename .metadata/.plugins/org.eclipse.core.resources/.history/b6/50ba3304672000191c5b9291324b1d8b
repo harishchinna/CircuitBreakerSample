@@ -1,0 +1,12 @@
+package com.cg.app.circuitbreaker.resource;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloResource {
+
+	public String world()
+	{
+		return "Hello World";
+	}
+}

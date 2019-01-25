@@ -1,0 +1,6 @@
+package com.cg.app.circuitbreaker.WebSite.resource;
+
+@org.springframework.stereotype.Service
+public class Service {
+
+}

@@ -1,0 +1,21 @@
+package com.cg.app.circuitbreaker.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class WebsiteResource {
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	public ResponseEntity<String> hello(Model model)
+	{
+		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:7676", String.class);
+		String message = entity.getBody();
+		model.addAttribute("message", messsage)
+	}
+}

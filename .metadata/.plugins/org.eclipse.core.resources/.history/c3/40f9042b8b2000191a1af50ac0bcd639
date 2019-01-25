@@ -1,0 +1,40 @@
+package com.cg.app.circuitbreaker.WebSite.resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
+
+@Controller
+@EnableHystrix
+public class WebsiteResource {
+
+	@Autowired
+	private Service service;
+			
+	@RequestMapping("/")
+	public String metho(Model model)
+	
+	{
+		return service.hello(model);
+	}
+	/*@HystrixCommand(fallbackMethod = "redirecting")*/
+	/*public String hello(Model model)
+	{
+		System.out.println("welcome");
+		ResponseEntity<String> entity = restTemplate.getForEntity("http://localhost:7766/client", String.class);
+		String message = entity.getBody();
+		model.addAttribute("message", message);
+		System.out.println(message);
+		return "helloWorld";
+	}
+	
+	  public String redirecting(Model model) { 
+		  model.addAttribute("message", "Gud morning Foks");
+		  return "helloWorld";
+		
+		  }*/
+	 
+}
